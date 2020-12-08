@@ -1,6 +1,6 @@
-<div style="text-align:center">
-  <img src="images/logo_black.jpg" alt="Sillynium Logo" width="300" height="300">
-</div>
+<p align="center">
+  <img src="images/logo_black.jpg" alt="Sillynium Logo" width=25%>
+</p>
 
 # sillynium 
 
