@@ -46,18 +46,20 @@ Heres a pretty good timeline and idea of what needs to be done - contribute wher
 
 ### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure iframe width/height = webpage scrollwidth/scrollheight ###
 
-### 3.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
+### 3.2 Webpage + [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Synchronise iframe scroll with parent window scroll ###
 
-### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
+### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
 
-### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker (inside toolbar) ###
+### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
 
-### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Colour picker to change colour of Box (inside toolbar) ###
+### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker (inside toolbar) ###
 
-### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Colour picker to change colour of Box (inside toolbar) ###
 
-### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function ###
+### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
 
-### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function ###
+### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function ###
 
-### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function ###
+### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function ###
+
+### 3.10 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function ###
