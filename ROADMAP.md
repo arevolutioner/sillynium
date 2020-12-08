@@ -6,12 +6,10 @@
 
 
 ## 1.0 Proof of Concept <a name="POC"></a>
-[concept/poc.py](concept/poc.py) is a proof of concept program. It serves as a good start point to show the inspiration behind sillynium.
+[concept/poc.py](concept/poc.py) is a proof of concept program. It's a good starting point to show the inspiration behind sillynium.
 
-poc.py fetches the desired URL in the background by running selenium webdriver in headless mode. It then gets a screenshot of the current window *ONLY*, not the whole page.
-See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end.
-
-Moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium's Future](#Future)
+poc.py fetches the desired URL in the background, by running selenium webdriver in headless mode. It then gets a screenshot of the current window *ONLY*, not the whole page.
+See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end. That is why moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium's Future](#Future)
 
 The basic idea of [concept/poc.py](concept/poc.py) is below:
 ![poc_flowchart](images/sillynium_poc_flow.png)
