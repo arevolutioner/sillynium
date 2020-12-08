@@ -35,5 +35,29 @@ This comes with quite some complexity however. The current working approach to a
 
 *And as crazy as it sounds*, ***it works!*** The webpage can be drawn on! But there is still work to be done!
 
-The iframe and the HTML content is developed in a completely separate file called [](). The way to achieve desired functionality is to ensure it works in isolation (ie: If I load []() can I draw on the screen?). When this file works, it is ported over to the [sillynium.py](sillynium.py) file
+The iframe and the HTML content is developed in a completely separate file called [draw_rect.html](HTML\CSS\JS/draw_rect.html). The way to achieve desired functionality is to ensure it works in isolation (ie: If I load [draw_rect.html](HTML\CSS\JS/draw_rect.html), can I draw on the screen?). When this file works, the content is ported over to the [sillynium.py](sillynium.py) file inside the iframe and executed via driver.execute_script().
+
+***Easy right?***
+
 ## 3.0 TODO <a name="TODO"></a>
+Most of the work TODO is actually on the HTML/CSS/JS side. This work then needs to be ported over to the [sillynium.py](sillynium.py) file. 
+
+Heres a pretty good timeline and idea of what needs to be done - contribute where and if you can!
+
+### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure iframe width/height = webpage scrollwidth/scrollheight ###
+
+### 3.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
+
+### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
+
+### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker (inside toolbar) ###
+
+### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Colour picker to change colour of Box (inside toolbar) ###
+
+### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+
+### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function ###
+
+### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function ###
+
+### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function ###
