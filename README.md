@@ -20,24 +20,21 @@ TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add 
 
 
 ## Usage
-***Read the [ROADMAP](ROADMAP.md) first***
-
 #### sillynium.py ####
-Simply run as you would any other python file
+Run as you would any other python file - currently under development
 - Chromedriver will launch Chrome + URL
 - You can now draw rectangles to that webpage - does nothing more yet! Please see [ROADMAP](ROADMAP.md)
 
 #### concept/poc.py ####
-[poc.py](concept/poc.py) is a proof of concept only and will not be developed further. 
+[poc.py](concept/poc.py) is a proof of concept only and will not be developed further.
+- Draws on screenshot of webpage window
 - It may fail on your OS as it was only coded to handle Windows 10 and Chrome
-- Run it, but please also read the [ROADMAP](ROADMAP.md)
 - For instructions, see [poc_instructions](concept/poc_instructions.md)
 
 
 ## Contributing
 Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Who can contribute?
 - Ideal contributors: Know any of Python, HTML, JavaScript
 - All welcome however
 
