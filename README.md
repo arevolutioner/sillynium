@@ -17,7 +17,6 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 ## Usage
 ***Read the [ROADMAP](ROADMAP.md) first*** 
 
-
 ### sillynium.py ###
 Simply run as you would any other python file
 - Chromedriver will launch Chrome + URL
@@ -29,7 +28,7 @@ Simply run as you would any other python file
 - It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
 - Run it anyway to play around and see how it works. It may inspire a better approach for sillynium.py
 
-### 
+### concept/poc.py instructions ###
 When the OpenCV window appears, click into it:
 - Press '1' : Red : For Input boxs
 - Press '2' : Orange : For grabbing text
@@ -37,8 +36,8 @@ When the OpenCV window appears, click into it:
 - Click + Hold 'Left Mouse Button' and drag to draw a box
 - Press 'r' to reset the canvas and cache and start again
 - Press 'q' to finish drawing and generate the script
+- After running check the generated script: [generated_script.py](generated_script.py)
 
-After running check the generated script: [generated_script.py](generated_script.py)
 
 ## Roadmap
 
