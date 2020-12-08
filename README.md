@@ -14,9 +14,13 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 - Accepting contributions! Please see [CONTRIBUTING](CONTRIBUTING.md)
 
 
+## Roadmap
+***Important! Please read the [ROADMAP](ROADMAP.md)***
+Plan very clearly laid out there. Currently only draws grey boxes to webpages, requires further work.
+
 
 ## Usage
-***Read the [ROADMAP](ROADMAP.md) first*** 
+***Read the [ROADMAP](ROADMAP.md) first***
 
 ### sillynium.py ###
 Simply run as you would any other python file
@@ -28,11 +32,6 @@ Simply run as you would any other python file
 - It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
 - Run it to play around, but please also read the [ROADMAP](ROADMAP.md)
 - For instructions, see [poc_instructions](concept/poc_instructions.md)
-
-
-## Roadmap
-
-***Important! Please read the [ROADMAP](ROADMAP.md)***
 
 
 ## Contributing
