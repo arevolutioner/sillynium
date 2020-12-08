@@ -3,7 +3,7 @@
 </p>
 
 # Sillynium 
-Automatically generate python selenium scripts by drawing coloured boxes around webpage elements. Please see [ROADMAP](ROADMAP.md) for how it works, vision, and what still needs to be done.
+Automatically generate python selenium scripts by drawing coloured boxes around webpage elements. Please see [ROADMAP](ROADMAP.md) for how it works, vision, and what needs to be done.
 
 TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add visual diagram to roadmap for sillynium.py
 
@@ -24,20 +24,19 @@ Master-plan inside. Currently only draws grey boxes to webpages, requires furthe
 ## Usage
 ***Read the [ROADMAP](ROADMAP.md) first***
 
-### sillynium.py ###
+#### sillynium.py ####
 Simply run as you would any other python file
 - Chromedriver will launch Chrome + URL
 - You can now draw rectangles to that webpage - does nothing more yet! Please see [ROADMAP](ROADMAP.md)
 
-### concept/poc.py ###
-**NOTE:** [poc.py](concept/poc.py) is a ***proof of concept only*** and will not be developed further. 
-- It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
-- Run it to play around, but please also read the [ROADMAP](ROADMAP.md)
+#### concept/poc.py ####
+[poc.py](concept/poc.py) is a proof of concept only and will not be developed further. 
+- It may fail on your OS as it was only coded to handle Windows 10 and Chrome
+- Run it, but please also read the [ROADMAP](ROADMAP.md)
 - For instructions, see [poc_instructions](concept/poc_instructions.md)
 
 
 ## Contributing
-
 Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Who can contribute?
@@ -48,7 +47,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 ## License
-
 Distributed under the [GNU-GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) License. See [LICENSE](LICENSE) for more information.
 
 
