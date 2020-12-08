@@ -44,22 +44,35 @@ Most of the work TODO is actually on the HTML/CSS/JS side. This work then needs 
 
 Heres a pretty good timeline and idea of what needs to be done - contribute where and if you can!
 
-### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure iframe width/height = webpage scrollwidth/scrollheight ###
+### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure iframe width/height = webpage body scrollwidth/scrollheight ###
+Since we want to be able to draw boxes on the entire webpage, we need to ensure the iframe covers the entire webpage body.
+This can be achieved by ensuring the iframe matches the size and position of the webpage body.
 
 ### 3.2 Webpage + [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Synchronise iframe scroll with parent window scroll ###
+This is crucial. To recieve the drawings, our iframe must sit infront of the webpage body. It is transparent so we can still see
+the webpage content underneath. Currently, scrolling only scrolls the iframe. This needs to be udpated so as the iframe is scrolled, the webpage body / parent
+scrolls too.
+
+The best way I know of to test ways of doing this is by loading a scrollable webpage, and copying everything inside the "js" variable in the [sillynium.py](sillynium.py) file. 
+Now open the chrome console (F12) and type document.body.innerHTML += <what you just copied>
 
 ### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
+The pencil is an artifact of the paint to canvas tutorial, since we only need to draw boxes it should be removed to simplify the HTML document.
 
 ### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
+Eventually when the option toolbar is created, it must be moveable. If it is static, it may block requried page elements. 
 
-### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker (inside toolbar) ###
+### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker for box (inside toolbar) ###
+Currently we can draw Grey boxes. This single colour is not of much use, so we need to implement a simple colour picker inside our toolbar (just like MS paint) so we can choose our box colour. We only require about ~9-10 different colours (representing each element type)
 
-### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Colour picker to change colour of Box (inside toolbar) ###
+### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+Currently as we draw, we are not collecting the coordinates or colours of the box anywhere. This is required to later determine elements at each box position.
 
-### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
+Currently there is no way to undo an incorrect drawing. A simple undo function is required (inside toolbar) 
 
-### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function ###
+### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
+Currently there is no way to reset the entire canvas. A simple reset function is required (inside toolbar)
 
-### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function ###
-
-### 3.10 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function ###
+### 3.10 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
+Well great we have all these coloured boxes, but no way to save our drawings and mvoe to the next step. Lets fix that by adding a finish drawing button within our toolbar.
