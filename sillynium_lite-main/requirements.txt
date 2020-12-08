@@ -1,0 +1,12 @@
+certifi==2020.11.8
+chardet==3.0.4
+colorama==0.4.4
+configparser==5.0.1
+crayons==0.4.0
+idna==2.10
+numpy==1.19.4
+opencv-python==4.4.0.46
+requests==2.25.0
+selenium==3.141.0
+urllib3==1.26.2
+webdriver-manager==3.2.2
