@@ -4,7 +4,7 @@
 1. [Proof of Concept](#POC)
 2. [Sillynium](#Now)
 3. [TODO](#TODO)
-4. [Sillynium's Future](#Future)
+4. [Future Ideas](#Future)
 
 
 ## 1.0 Proof of Concept <a name="POC"></a>
@@ -99,3 +99,9 @@ This could be based off the existing code in [concept/poc.py](concept/poc.py). D
 
 ### 3.13 [sillynium.py](sillynium.py) - Determine script generation rules ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what script generation rules should be implemented.
+
+## 4.0 Future Ideas <a name="Future"></a>##
+All the current ideas for future features
+- Live code generation console
+- Convert to browser extension
+- Add support for more languages (Java)
