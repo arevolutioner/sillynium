@@ -3,21 +3,18 @@
 </p>
 
 # Sillynium 
-
-Automatically generate python selenium scripts by drawing coloured boxes around elements on a webpage. Please see [ROADMAP](ROADMAP.md) for how it works.
+Automatically generate python selenium scripts by drawing coloured boxes around webpage elements. Please see [ROADMAP](ROADMAP.md) for how it works.
 
 
 ## Status
-
 ***Work-in-progress:***
-- Current state loads a given URL, and injects JavaScript which allows you to draw on top of the webpage. Please see [ROADMAP](ROADMAP.md)
+- Currently loads a given URL, and injects JavaScript, which allows you to draw on the webpage. Please see [ROADMAP](ROADMAP.md)
 
 ***Contributing***
-- Community contributions to any files in **sillynium directory** are open! Please see [CONTRIBUTING](CONTRIBUTING.md)
+- Contributions to files in **sillynium directory** are open! Please see [CONTRIBUTING](CONTRIBUTING.md)
 
 
 ## Usage
-
 ***Read the [ROADMAP](ROADMAP.md) first*** 
 
 
