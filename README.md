@@ -10,8 +10,9 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 ***Work-in-progress:***
 - Currently loads a given URL, and injects JavaScript, which allows you to draw on the webpage. Please see [ROADMAP](ROADMAP.md)
 
-***Contributing***
+***Contributing:***
 - Accepting contributions! Please see [CONTRIBUTING](CONTRIBUTING.md)
+
 
 
 ## Usage
@@ -25,13 +26,14 @@ Simply run as you would any other python file
 ### concept/poc.py ###
 **NOTE:** [poc.py](concept/poc.py) is a ***proof of concept only*** and will not be developed further. 
 - It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
-- Run it anyway to play around and see how it works. It may inspire a better approach for sillynium.py
+- Run it to play around, but please also read the [ROADMAP](ROADMAP.md)
 - For instructions, see [poc_instructions](concept/poc_instructions.md)
 
 
 ## Roadmap
 
 ***Important! Please read the [ROADMAP](ROADMAP.md)***
+
 
 ## Contributing
 
@@ -41,9 +43,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+
 ## License
 
 Distributed under the [GNU-GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) License. See [LICENSE](LICENSE) for more information.
+
 
 ## External Credits
 - [Mihai Sucan: Creating an HTML5 Canvas Painting Application](https://dev.opera.com/articles/html5-canvas-painting/) : Followed this tutorial to create the Painting Canvas!
