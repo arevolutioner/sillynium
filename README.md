@@ -8,7 +8,7 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 
 ## Status
 ***Work-in-progress:***
-- Currently loads a given URL, and injects JavaScript, which allows you to draw on the webpage. Please see [ROADMAP](ROADMAP.md)
+- Currently loads a given URL, and injects JavaScript, which allows you to draw on any given webpage. Please see [ROADMAP](ROADMAP.md)
 
 ***Contributing:***
 - Accepting contributions! Please see [CONTRIBUTING](CONTRIBUTING.md)
