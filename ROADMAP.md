@@ -18,8 +18,17 @@ Now that we have all the elements (and all their possible attributes if we so de
 
 See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end. That is why moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium](#Now) about how this can be achieved.
 
-For visual learners, a visual representation [concept/poc.py](concept/poc.py) is below:![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
+For visual learners, a visual explanation of [concept/poc.py](concept/poc.py) is below:![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
 
 
 ## 2.0 Sillynium <a name="Now"></a>
-[sillynium.py](sillynium.py)
+[sillynium.py](sillynium.py) is the natural extension to the proof of concept, and draws directly to the webpage.
+
+This comes with quite some complexity however. The current approach to achieve this is as follows:
+- Load URL via Selenium Webdriver
+- Retrieve webpage body's scrollheight and scrollwidth values
+- Inject a transparent iframe into webpage, with dimensions the exact size of the page body
+- iframe has extremely high z-index that places it as the top-most element in the page
+- The iframe contains an entire HTML document as its source
+- This HTML src document contains an HTML Canvas + inline JavaScript functions to create the drawing functionality of the iframe
+
