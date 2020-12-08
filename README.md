@@ -15,8 +15,8 @@ TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add 
 
 ## Roadmap
 ***Important! Please read [ROADMAP](ROADMAP.md)***
-
-Master-plan inside. Currently only draws grey boxes to webpages, requires further work.
+- Plan and vision inside
+- Currently only draws grey boxes to webpages - requires further work.
 
 
 ## Usage
