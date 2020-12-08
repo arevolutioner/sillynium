@@ -11,7 +11,7 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 - Currently loads a given URL, and injects JavaScript, which allows you to draw on the webpage. Please see [ROADMAP](ROADMAP.md)
 
 ***Contributing***
-- Contributions to files in **sillynium directory** are open! Please see [CONTRIBUTING](CONTRIBUTING.md)
+- Accepting contributions! Please see [CONTRIBUTING](CONTRIBUTING.md)
 
 
 ## Usage
@@ -24,7 +24,6 @@ Simply run as you would any other python file
 
 ### concept/poc.py ###
 **NOTE:** [poc.py](concept/poc.py) is a ***proof of concept only*** and will not be developed further. 
-- It was created in 1 night just to test the concept of auto-generating selenium scripts and has served its purpose.
 - It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
 - Run it anyway to play around and see how it works. It may inspire a better approach for sillynium.py
 - For instructions, see [poc_instructions](concept/poc_instructions.md)
@@ -32,7 +31,7 @@ Simply run as you would any other python file
 
 ## Roadmap
 
-Please see [ROADMAP](ROADMAP.md)
+***Important! Please see [ROADMAP](ROADMAP.md)***
 
 ## Contributing
 
