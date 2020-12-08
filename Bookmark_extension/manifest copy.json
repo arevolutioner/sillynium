@@ -1,0 +1,26 @@
+{
+    "description": "Create a bookmark on browser_action button click",
+    "manifest_version": 2,
+    "name": "Demo: Create Bookmark",
+    "version": "0.1",
+
+
+
+    "permissions": [
+        "bookmarks"
+    ],
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "32": "icons/bookmark-it.png"
+        },
+        "default_title": "Do Action",
+        "browser_style": true
+    }
+}
