@@ -5,7 +5,7 @@
 # Sillynium 
 Automatically generate python selenium scripts by drawing coloured boxes around webpage elements. Please see [ROADMAP](ROADMAP.md) for how it works, vision, and what still needs to be done.
 
-TODO: VIDEO GOES HERE 
+TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add visual diagram to roadmap for sillynium.py
 
 ## Status
 ***Work-in-progress:***
