@@ -1,33 +1,8 @@
-![sillynium](./images/banner.jpeg)
-# sillynium_lite
+<div style="text-align: center;"><img src="images/logo_black.jpg" alt="Sillynium Logo" width="300" height="300" align="center"></div>
 
-*sillynium_lite* is a proof of concept to automatically generate working python selenium scripts by 
-drawing coloured boxes around elements on a webpage *screenshot*. For ***sillynium*** & ***sillynium_pro***, visit [sillynium.com](http://www.sillynium.com/)
+# sillynium 
 
-
-
-## Versions
-
-| Features                     | Lite | Base | Pro**|
-| :---                         |:----:|:----:|:----:|
-| Element auto fetch           |  NO  | NO   | YES  |
-| Multiple URL threading       |  NO  | NO   | YES  |
-| Multi-language output        |  NO  | NO   | YES  |
-| Web-application              |  NO  | YES  | YES  |
-| Live generated code feed     |  NO  | YES  | YES  |
-| Draw directly on webpages    |  NO  | YES  | YES  |
-| Onscreen color-picker/tools  |  NO  | YES  | YES  |
-| Visual drawing feedback      |  NO  | YES  | YES  |
-| Undo / Reset drawing         |  NO  | YES  | YES  |
-| Elements supported           | SOME | ALL  | ALL  |
-| Shortcut Keys                |  NO  | YES* | YES  |
-| Configurable boilerplate     |  NO  | YES* | YES  |
-  
-**future features*
-
-***pro version currently in development*
-
-Please visit [sillynium.com](http://www.sillynium.com/) to learn more
+Automatically generate python selenium scripts by drawing coloured boxes around elements on a webpage.
 
 
 ## Installation
