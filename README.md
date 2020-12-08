@@ -1,10 +1,11 @@
 <p align="center">
-  <img src="images/logo_wide.jpg" alt="Sillynium Logo" width=100%>
+  <img src="media/logo_wide.jpg" alt="Sillynium Logo" width=100%>
 </p>
 
 # Sillynium 
 Automatically generate python selenium scripts by drawing coloured boxes around webpage elements. Please see [ROADMAP](ROADMAP.md) for how it works and what still needs to be done.
 
+TODO: VIDEO GOES HERE 
 
 ## Status
 ***Work-in-progress:***
