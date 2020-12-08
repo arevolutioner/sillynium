@@ -10,9 +10,7 @@ TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add 
 ## Status
 ***Work-in-progress:***
 - Currently loads a given URL, and injects JavaScript, which allows you to draw on any given webpage. Please see [ROADMAP](ROADMAP.md)
-
-***Contributing:***
-- Accepting contributions! Please see [CONTRIBUTING](CONTRIBUTING.md)
+- Accepting contributions, created as an open-source project
 
 
 ## Roadmap
