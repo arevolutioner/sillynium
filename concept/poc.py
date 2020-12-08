@@ -1,10 +1,10 @@
 """
 --------------------------------------------------------------------------------
-sillynium_lite.py - A proof of concept for an automated python script generator for
+poc.py - A proof of concept for an automated python script generator for
 selenium. 
 Thank you for your understanding, time, and interest!
 
-For full version please visit: https:///sillynium.com//
+For full version please use and contribute to sillynium.py
 --------------------------------------------------------------------------------
 This script fetches a screenshot of the window view of a given website.
 Screenshot is saved locally and opened via opencv. The user draws colored
@@ -14,7 +14,9 @@ Press r to clear screen and q to quit drawing. Rectangle coords/colors are
 logged as reference to element location on a site. Finally, script is generated
 and saved locally based on colors of rectangles & includes boilerplate code.
 --------------------------------------------------------------------------------
-Copyright (C) <2020>  <Author/s: Connor Talbot, Sillynium.com>
+Copyright (C) <2020>  
+<Author/s: sillynium.com, https://github.com/con-dog/sillynium>
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -162,13 +164,12 @@ filename = "generated_script.py"  # used as a generic landing point
 with open(filename, 'w') as f:
     f.write(
         "'''\n"
-        "Copyright (C) <2020>  <Author/s: Connor Talbot, YOU, Sillynium.com>\n"
+        "Copyright (C) <2020>\n"
+        "<Authors: sillynium.com, https:///github.com//con-dog//sillynium, you\n>"
         f"\n{filename} - Hello there! I'm an auto-generated python script!\n\n"
-        "I'm not very good just yet, and serve mainly as a proof of concept.\n"
-        "For my full version please visit at https:///sillynium.com// \n\n"
+        "I'm not very good just yet, and serve just as a proof of concept.\n"
+        "Full version please visit https:///github.com//con-dog//sillynium.git \n\n"
         "But, if you like my lite versionyou can help make me great by\n"
-        "contributing to me at https://github.com/con-dog/sillynium_lite.git\n"
-        "\nYou may have an even better way to implement me than my author! ;)"
         "\n'''\n\n"
         "from selenium import webdriver\n"
         "from webdriver_manager.chrome import ChromeDriverManager\n\n"
@@ -199,9 +200,6 @@ with open(filename, 'w') as f:
         elem_outer_html = element.get_attribute('outerHTML')
 
         # now check what to do based on the rectangles color
-        # NOTE: there are no checks to handle multiple same color rectangles
-        # so code gets duplicated and information gets lost - remember POC!
-
         # non boiler-plate code
         if ref[2] == (0, 0, 255):  # if rectangle is red
             f.write(
