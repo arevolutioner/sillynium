@@ -27,7 +27,7 @@ Simply run as you would any other python file
 - It was created in 1 night just to test the concept of auto-generating selenium scripts and has served its purpose.
 - It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
 - Run it anyway to play around and see how it works. It may inspire a better approach for sillynium.py
-- For instructions, see [poc_instructions](poc_instructions.md)
+- For instructions, see [poc_instructions](concept/poc_instructions.md)
 
 
 ## Roadmap
