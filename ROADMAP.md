@@ -9,6 +9,12 @@
 
 ## 1.0 How it Works <a name="HOW"></a> ##
 
+1. Launches browser and redirects to given Url
+2. Injects a canvas infront of body - basically turns the whole page into a canvas
+3. Injects <script> which contains JavaScript drawing functionality
+4. Now can draw boxes on page around different elements, and change colours for different actions
+5. Close browser
+6. Converts to code based on boxes location amd colours 
 
 ## 2.0 Proof of Concept <a name="POC"></a>
 [concept/poc.py](concept/poc.py) is a proof of concept program. However, it is a good starting point to show the inspiration behind ***sillynium***.
