@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo_black.jpg" alt="Sillynium Logo" width=25%>
+  <img src="images/logo_wide.jpg" alt="Sillynium Logo" width=100%>
 </p>
 
 # sillynium 
