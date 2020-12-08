@@ -15,8 +15,9 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 
 
 ## Roadmap
-***Important! Please read the [ROADMAP](ROADMAP.md)***
-Plan very clearly laid out there. Currently only draws grey boxes to webpages, requires further work.
+***Important! Please read [ROADMAP](ROADMAP.md)***
+
+Master-plan inside. Currently only draws grey boxes to webpages, requires further work.
 
 
 ## Usage
