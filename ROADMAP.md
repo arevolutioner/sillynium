@@ -18,7 +18,7 @@ Now that we have all the elements (and all their possible attributes if we so de
 
 See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end. That is why moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium](#Now) about how this can be achieved.
 
-The basic idea of [concept/poc.py](concept/poc.py) is below:![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
+For visual learners, a visual representation [concept/poc.py](concept/poc.py) is below:![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
 
 
 ## 2.0 Sillynium <a name="Now"></a>
