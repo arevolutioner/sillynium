@@ -40,9 +40,11 @@ Simply run as you would any other python file
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Who can contribute?
+- Ideal contributors: Know any of Python, HTML, JavaScript
+- All welcome however
 
-Please make sure to update tests as appropriate.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
 ## License
