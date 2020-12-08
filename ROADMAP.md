@@ -12,7 +12,7 @@ poc.py fetches the desired URL in the background, by running selenium webdriver 
 See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end. That is why moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium's Future](#Future)
 
 The basic idea of [concept/poc.py](concept/poc.py) is below:
-![Proof of Concept Flowchart](concept/sillynium_poc_flow.png)
+![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
 
 
 ## 2.0 Sillynium's Future <a name="Future"></a>
