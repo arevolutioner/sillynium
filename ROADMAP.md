@@ -39,7 +39,7 @@ The iframe and the HTML content is developed in a completely separate file calle
 
 ***Easy right?***
 
-## 3.0 TODO <a name="TODO"></a>
+## 3.0 TODO - Minimum required steps <a name="TODO"></a>
 Most of the work TODO is actually on the HTML/CSS/JS side. This work then needs to be ported over to the [sillynium.py](sillynium.py) file. 
 
 Heres a pretty good timeline and idea of what needs to be done - contribute where and if you can!
@@ -90,3 +90,12 @@ options.add_experimental_option("excludeSwitches", ['enable-automation'])
 ```
 lets determine what should be included in the boiler-plate as a community. 
 Perhaps this could even be saved in a config.ini file which is called by the script
+
+### 3.11 [sillynium.py](sillynium.py) - Fetch all elements based on their positions ###
+This could be based off the existing code in [concept/poc.py](concept/poc.py) which does the same already.
+
+### 3.12 [sillynium.py](sillynium.py) - Determine colour rules ###
+This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what colours apply to what elements, and best methods for performing an action based on box colour.
+
+### 3.13 [sillynium.py](sillynium.py) - Determine script generation rules ###
+This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what script generation rules should be implemented.
