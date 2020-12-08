@@ -31,7 +31,7 @@ Simply run as you would any other python file
 
 ## Roadmap
 
-***Important! Please see [ROADMAP](ROADMAP.md)***
+***Important! Please read the [ROADMAP](ROADMAP.md)***
 
 ## Contributing
 
