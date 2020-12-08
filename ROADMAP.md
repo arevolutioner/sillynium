@@ -3,7 +3,8 @@
 # Table of contents
 1. [Proof of Concept](#POC)
 2. [Sillynium](#Now)
-3. [Sillynium's Future](#Future)
+3. [TODO](#TODO)
+4. [Sillynium's Future](#Future)
 
 
 ## 1.0 Proof of Concept <a name="POC"></a>
@@ -32,3 +33,7 @@ This comes with quite some complexity however. The current working approach to a
 - The iframe contains an entire inline HTML document as its source
 - This HTML src document contains an HTML Canvas + inline JavaScript functions to create the drawing functionality of the iframe
 
+*And as crazy as it sounds*, ***it works!*** The webpage can be drawn on! But there is still work to be done!
+
+The iframe and the HTML content is developed in a completely separate file called [](). The way to achieve desired functionality is to ensure it works in isolation (ie: If I load []() can I draw on the screen?). When this file works, it is ported over to the [sillynium.py](sillynium.py) file
+## 3.0 TODO <a name="TODO"></a>
