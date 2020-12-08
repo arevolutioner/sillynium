@@ -68,11 +68,25 @@ Currently we can draw Grey boxes. This single colour is not of much use, so we n
 ### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
 Currently as we draw, we are not collecting the coordinates or colours of the box anywhere. This is required to later determine elements at each box position.
 
-### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
+### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
 Currently there is no way to undo an incorrect drawing. A simple undo function is required (inside toolbar) 
 
-### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
+### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
 Currently there is no way to reset the entire canvas. A simple reset function is required (inside toolbar)
 
-### 3.10 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
+### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
 Well great we have all these coloured boxes, but no way to save our drawings and mvoe to the next step. Lets fix that by adding a finish drawing button within our toolbar.
+
+### 3.10 [sillynium.py](sillynium.py) - Configure boiler-plate code ###
+The majority of Python Selenium scripts feature some repeating code such as:
+```python
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+# set up webdriver options
+options = webdriver.ChromeOptions()
+options.headless = False
+options.add_experimental_option("excludeSwitches", ['enable-automation'])
+```
+lets determine what should be included in the boiler-plate as a community. 
+Perhaps this could even be saved in a config.ini file which is called by the script
