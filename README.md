@@ -4,30 +4,34 @@
 
 # sillynium 
 
-Automatically generate python selenium scripts by drawing coloured boxes around elements on a webpage.
+Automatically generate python selenium scripts by drawing coloured boxes around elements on a webpage. Please see the [ROADMAP](ROADMAP.md) 
+
+## Status
+
+***Work-in-progress:***
+- sillynium.py: Currently loads a URL, and injects JavaScript to allow you to draw on top of the webpage
+
+***Contributing***
+- Community contributions to any files in **sillynium directory** are open! 
 
 
-## Installation
-
-Ideally one would create a virtual environment and pip install -r requirements.txt from the directory.
-```bash
-C:/Path/To/sillynium: pip install -r requirements.txt
-```
-Then run [sillynium_lite.py](sillynium_lite.py)
 
 ## Usage
 
-Read the [ROADMAP](ROADMAP.md) 
+***Read the [ROADMAP](ROADMAP.md) first*** 
 
-NOTE: [sillynium_lite.py](sillynium_lite.py) is a proof of concept open to the community to further develop:
+### sillynium.py
+
+Simply run as you would any other python file
+
+
+
+
+NOTE: [sillynium_lite](sillynium_lite) is a proof of concept only.
 - It was created just to test the concept of auto-generating selenium scripts
 - It does not cover most use cases or elements in its current form
-- In its current state it may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
+- It may **fail on your OS as it was only coded to handle Windows 10 and Chrome**
 - Is severely limited in both scope and function.
-
-
-
-Download / Clone the repo and run [sillynium_lite.py](sillynium_lite.py).
 
 When the OpenCV window appears, click into it:
 - Press '1' : Red : For Input boxs
