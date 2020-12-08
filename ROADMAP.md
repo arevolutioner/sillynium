@@ -24,11 +24,11 @@ For visual learners, a visual explanation of [concept/poc.py](concept/poc.py) is
 ## 2.0 Sillynium <a name="Now"></a>
 [sillynium.py](sillynium.py) is the natural extension to the proof of concept, and draws directly to the webpage.
 
-This comes with quite some complexity however. The current approach to achieve this is as follows:
+This comes with quite some complexity however. The current working approach to achieve this is as follows:
 - Load URL via Selenium Webdriver
 - Retrieve webpage body's scrollheight and scrollwidth values
 - Inject a transparent iframe into webpage, with dimensions the exact size of the page body
-- iframe has extremely high z-index that places it as the top-most element in the page
-- The iframe contains an entire HTML document as its source
+- Set iframe z-index very high, to place it as the top-most element in the page
+- The iframe contains an entire inline HTML document as its source
 - This HTML src document contains an HTML Canvas + inline JavaScript functions to create the drawing functionality of the iframe
 
