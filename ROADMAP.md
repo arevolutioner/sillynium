@@ -1,5 +1,7 @@
 # ROADMAP
 
+Pre-warning. This project is ambitious.
+
 # Table of contents
 1. [How it Works](#HOW)
 2. [Sillynium](#Now)
@@ -40,9 +42,9 @@ Most of the work TODO is actually on the HTML/CSS/JS side. This work then needs 
 
 Heres a pretty good timeline and idea of what needs to be done - contribute where and if you can!
 
-### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure canvas width/height = webpage body scrollwidth/scrollheight ###
-Since we want to be able to draw boxes on the entire webpage, we need to ensure the canvas covers the entire webpage body.
-This can be achieved by ensuring the canvas matches the size and position of the webpage body.
+
+### 3.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Fix issue where canvas does not cover small top part of window ###
+I believe this is caused by the label for drawing tool potentially offsetting the canvas? Needs to be fixed so canvas covers entire page.
 
 ### 3.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Synchronise iframe scrolling with webpage (parent) scrolling ###
 Right now only the iframe scrolls. The webpage and iframe must be in sync and scrolling together, so that boxes line up with the correct elements.
