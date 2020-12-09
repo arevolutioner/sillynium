@@ -22,6 +22,11 @@ TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add 
 
 
 ## Usage
+```CMD
+C:\Path-to-sillynium>
+C:\Path-to-sillynium>pip install -r requirements.txt
+```
+
 #### sillynium.py ####
 Run as you would any other python file - currently under development
 - Chromedriver will launch Chrome + URL
