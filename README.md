@@ -22,6 +22,7 @@ TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add 
 
 
 ## Usage
+In console / bash
 ```CMD
 C:\Path-to-sillynium>
 C:\Path-to-sillynium>pip install -r requirements.txt
