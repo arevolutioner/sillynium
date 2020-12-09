@@ -10,11 +10,10 @@
 ## 1.0 How it Works <a name="HOW"></a> ##
 
 1. Launches webdriver browser and redirects to given Url
-2. Injects a canvas infront of body - basically turns the whole page into a drawable canvas (***It is not XSS as is client side only***)
-3. Injects <script> which contains JavaScript drawing functionality (***It is not XSS as is client side only***)
-4. Now can draw boxes on page around different elements, and change colours for different actions
-5. Close browser
-6. Converts to code based on boxes location amd colours 
+2. Injects an iframe containing a Canvas and JS infront of the body - basically turns the whole page into a drawable canvas
+3. Now can draw boxes on page around different elements, and change colours for different actions
+4. Close browser
+5. Converts to code based on boxes location amd colours 
   
 For those of you that are visual:![Proof of Concept Flowchart](media/sillynium_flowchart.jpg)
 
@@ -25,13 +24,14 @@ For those of you that are visual:![Proof of Concept Flowchart](media/sillynium_f
 This comes with quite some complexity however. The current working approach to achieve this is as follows:
 - Load URL via Selenium Webdriver
 - Retrieve webpage body's scrollheight and scrollwidth values
-- Inject a transparent canvas into webpage, with dimensions the exact size of the page body
-- Set canvas z-index very high, to place it as the top-most element in the page
-- Inject inline JavaScript functions to create the drawing functionality of the canvas
+- Inject a transparent iframe into webpage, with dimensions the exact size of the page body, and position matching body
+- irfame src is a srcdoc, which contains an HTML doc, which contains a canvas and javascript to draw to that canvas
+- Set iframe z-index very high, to place it as the top-most element in the page
+- iframe and canvas are both transparent, so page beneath can still be seen
 
 *As crazy as it sounds*, ***it works!*** The webpage can be drawn on! But there is still work to be done!
 
-The Canvas and HTML content is developed in a completely separate file called [draw_rect.html](HTML\CSS\JS/draw_rect.html). The way to achieve desired functionality is to ensure it works in isolation (ie: If I load [draw_rect.html](HTML\CSS\JS/draw_rect.html), can I draw on the screen?). When this file works, the content is ported over to the [sillynium.py](sillynium.py) file and executed via driver.execute_script().
+The iframe content is developed in a completely separate file called [draw_rect.html](HTML\CSS\JS/draw_rect.html). The way to achieve desired functionality is to ensure it works in isolation (ie: If I load [draw_rect.html](HTML\CSS\JS/draw_rect.html), can I draw on the screen?). When this file works, the iframe content is ported over to the [sillynium.py](sillynium.py) file and executed via driver.execute_script().
 
 ***Easy right?***
 
@@ -44,28 +44,31 @@ Heres a pretty good timeline and idea of what needs to be done - contribute wher
 Since we want to be able to draw boxes on the entire webpage, we need to ensure the canvas covers the entire webpage body.
 This can be achieved by ensuring the canvas matches the size and position of the webpage body.
 
-### 3.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
+### 3.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Synchronise iframe scrolling with webpage (parent) scrolling ###
+Right now only the iframe scrolls. The webpage and iframe must be in sync and scrolling together, so that boxes line up with the correct elements.
+
+### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
 The pencil is an artifact of the paint to canvas tutorial, since we only need to draw boxes it should be removed to simplify the HTML document.
 
-### 3.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
+### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
 Eventually when the option toolbar is created, it must be moveable. If it is static, it may block requried page elements. 
 
-### 3.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker for box (inside toolbar) ###
+### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker for box (inside toolbar) ###
 Currently we can draw Grey boxes. This single colour is not of much use, so we need to implement a simple colour picker inside our toolbar (just like MS paint) so we can choose our box colour. We only require about ~9-10 different colours (representing each element type)
 
-### 3.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
 Currently as we draw, we are not collecting the coordinates or colours of the box anywhere. This is required to later determine elements at each box position.
 
-### 3.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
+### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
 Currently there is no way to undo an incorrect drawing. A simple undo function is required (inside toolbar) 
 
-### 3.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
+### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
 Currently there is no way to reset the entire canvas. A simple reset function is required (inside toolbar)
 
-### 3.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
+### 3.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
 Well great we have all these coloured boxes, but no way to save our drawings and mvoe to the next step. Lets fix that by adding a finish drawing button within our toolbar.
 
-### 3.9 [sillynium.py](sillynium.py) - Configure boiler-plate code ###
+### 3.10 [sillynium.py](sillynium.py) - Configure boiler-plate code ###
 The majority of Python Selenium scripts feature some repeating code such as:
 ```python
 from selenium import webdriver
@@ -79,13 +82,13 @@ options.add_experimental_option("excludeSwitches", ['enable-automation'])
 lets determine what should be included in the boiler-plate as a community. 
 Perhaps this could even be saved in a config.ini file which is called by the script
 
-### 3.10 [sillynium.py](sillynium.py) - Fetch all elements based on their positions ###
+### 3.11 [sillynium.py](sillynium.py) - Fetch all elements based on their positions ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py) which does the same already.
 
-### 3.11 [sillynium.py](sillynium.py) - Determine colour rules ###
+### 3.12 [sillynium.py](sillynium.py) - Determine colour rules ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what colours apply to what elements, and best methods for performing an action based on box colour.
 
-### 3.12 [sillynium.py](sillynium.py) - Determine script generation rules ###
+### 3.13 [sillynium.py](sillynium.py) - Determine script generation rules ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what script generation rules should be implemented.
 
 ## 4.0 Future Ideas <a name="Future"></a>##
