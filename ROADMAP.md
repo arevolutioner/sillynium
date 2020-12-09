@@ -9,7 +9,7 @@
 
 ## 1.0 How it Works <a name="HOW"></a> ##
 
-1. Launches browser and redirects to given Url
+1. Launches webdriver browser and redirects to given Url
 2. Injects a canvas infront of body - basically turns the whole page into a drawable canvas (***It is not XSS as is client side only***)
 3. Injects <script> which contains JavaScript drawing functionality (***It is not XSS as is client side only***)
 4. Now can draw boxes on page around different elements, and change colours for different actions
