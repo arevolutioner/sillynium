@@ -15,6 +15,8 @@
 4. Now can draw boxes on page around different elements, and change colours for different actions
 5. Close browser
 6. Converts to code based on boxes location amd colours 
+  
+For those of you that are visual:![Proof of Concept Flowchart](media/sillynium_flowchart.jpg)
 
 ## 2.0 Proof of Concept <a name="POC"></a>
 [concept/poc.py](concept/poc.py) is a proof of concept program. However, it is a good starting point to show the inspiration behind ***sillynium***.
@@ -28,7 +30,7 @@ Now that we have all the elements (and all their possible attributes if we so de
 
 See [concept/poc.py](concept/poc.py) to run it and test it out. You will discover very quickly that it is limited, and a webpage screenshot is a dead-end. That is why moving forward, sillynium must work by drawing directly to the webpage. See [Sillynium](#Now) about how this can be achieved.
 
-For visual learners, a visual explanation of [concept/poc.py](concept/poc.py) is below:![Proof of Concept Flowchart](concept/poc_flowchart.jpg)
+For those of you that are visual:![Proof of Concept Flowchart](media/poc_flowchart.jpg)
 
 
 ## 3.0 Sillynium <a name="Now"></a>
