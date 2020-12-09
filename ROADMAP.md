@@ -10,8 +10,8 @@
 ## 1.0 How it Works <a name="HOW"></a> ##
 
 1. Launches browser and redirects to given Url
-2. Injects a canvas infront of body - basically turns the whole page into a canvas
-3. Injects <script> which contains JavaScript drawing functionality
+2. Injects a canvas infront of body - basically turns the whole page into a drawable canvas (***It is not XSS as is client side only***)
+3. Injects <script> which contains JavaScript drawing functionality (***It is not XSS as is client side only***)
 4. Now can draw boxes on page around different elements, and change colours for different actions
 5. Close browser
 6. Converts to code based on boxes location amd colours 
@@ -53,40 +53,32 @@ Most of the work TODO is actually on the HTML/CSS/JS side. This work then needs 
 
 Heres a pretty good timeline and idea of what needs to be done - contribute where and if you can!
 
-### 4.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure iframe width/height = webpage body scrollwidth/scrollheight ###
-Since we want to be able to draw boxes on the entire webpage, we need to ensure the iframe covers the entire webpage body.
-This can be achieved by ensuring the iframe matches the size and position of the webpage body.
+### 4.1 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Ensure canvas width/height = webpage body scrollwidth/scrollheight ###
+Since we want to be able to draw boxes on the entire webpage, we need to ensure the canvas covers the entire webpage body.
+This can be achieved by ensuring the canvas matches the size and position of the webpage body.
 
-### 4.2 Webpage + [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Synchronise iframe scroll with parent window scroll ###
-This is crucial. To recieve the drawings, our iframe must sit infront of the webpage body. It is transparent so we can still see
-the webpage content underneath. Currently, scrolling only scrolls the iframe. This needs to be udpated so as the iframe is scrolled, the webpage body / parent
-scrolls too.
-
-The best way I know of to test ways of doing this is by loading a scrollable webpage, and copying everything inside the "js" variable in the [sillynium.py](sillynium.py) file. 
-Now open the chrome console (F12) and type document.body.innerHTML += <what you just copied>
-
-### 4.3 draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
+### 4.2 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Update to remove pencil functionality (not-used) ###
 The pencil is an artifact of the paint to canvas tutorial, since we only need to draw boxes it should be removed to simplify the HTML document.
 
-### 4.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
+### 4.3 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create a draggable toolbar ###
 Eventually when the option toolbar is created, it must be moveable. If it is static, it may block requried page elements. 
 
-### 4.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker for box (inside toolbar) ###
+### 4.4 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Add a simple colour picker for box (inside toolbar) ###
 Currently we can draw Grey boxes. This single colour is not of much use, so we need to implement a simple colour picker inside our toolbar (just like MS paint) so we can choose our box colour. We only require about ~9-10 different colours (representing each element type)
 
-### 4.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
+### 4.5 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Collect drawn box/es coordinates + colours ###
 Currently as we draw, we are not collecting the coordinates or colours of the box anywhere. This is required to later determine elements at each box position.
 
-### 4.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
+### 4.6 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create undo function (inside toolbar) ###
 Currently there is no way to undo an incorrect drawing. A simple undo function is required (inside toolbar) 
 
-### 4.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
+### 4.7 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create reset function (inside toolbar) ###
 Currently there is no way to reset the entire canvas. A simple reset function is required (inside toolbar)
 
-### 4.9 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
+### 4.8 [draw_rect.html](HTML\CSS\JS/draw_rect.html) - Create finish drawing function (inside toolbar) ###
 Well great we have all these coloured boxes, but no way to save our drawings and mvoe to the next step. Lets fix that by adding a finish drawing button within our toolbar.
 
-### 4.10 [sillynium.py](sillynium.py) - Configure boiler-plate code ###
+### 4.9 [sillynium.py](sillynium.py) - Configure boiler-plate code ###
 The majority of Python Selenium scripts feature some repeating code such as:
 ```python
 from selenium import webdriver
@@ -100,17 +92,17 @@ options.add_experimental_option("excludeSwitches", ['enable-automation'])
 lets determine what should be included in the boiler-plate as a community. 
 Perhaps this could even be saved in a config.ini file which is called by the script
 
-### 4.11 [sillynium.py](sillynium.py) - Fetch all elements based on their positions ###
+### 4.10 [sillynium.py](sillynium.py) - Fetch all elements based on their positions ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py) which does the same already.
 
-### 4.12 [sillynium.py](sillynium.py) - Determine colour rules ###
+### 4.11 [sillynium.py](sillynium.py) - Determine colour rules ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what colours apply to what elements, and best methods for performing an action based on box colour.
 
-### 4.13 [sillynium.py](sillynium.py) - Determine script generation rules ###
+### 4.12 [sillynium.py](sillynium.py) - Determine script generation rules ###
 This could be based off the existing code in [concept/poc.py](concept/poc.py). Determine what script generation rules should be implemented.
 
 ## 5.0 Future Ideas <a name="Future"></a>##
-All the current ideas for future features
-- Live code generation console
+All the current ideas for future features go here.
+
 - Convert to browser extension
 - Add support for more languages (Java)
