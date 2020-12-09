@@ -20,7 +20,7 @@ See [ROADMAP](ROADMAP.md) for how it works, vision, and TODO.
 
 
 ## Usage
-In console / bash
+In console / bash to install libraies required:
 ```CMD
 C:\Path-to-sillynium>
 C:\Path-to-sillynium>pip install -r requirements.txt
@@ -29,7 +29,7 @@ C:\Path-to-sillynium>pip install -r requirements.txt
 #### sillynium.py ####
 Run as you would any other python file - currently under development
 - Chromedriver will launch Chrome + URL
-- You can now draw boxes to that webpage 
+- You can now draw boxes to that webpage directly
 - Does nothing more yet! Please see [ROADMAP](ROADMAP.md)
 
 #### concept/poc.py ####
