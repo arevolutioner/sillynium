@@ -7,8 +7,6 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 
 See [ROADMAP](ROADMAP.md) for how it works, vision, and TODO.
 
-TODO: VIDEO GOES HERE, WATERMARK VIDEO, ADD COMMENTS TO HTML/CSS/JS file/s, add visual diagram to roadmap for sillynium.py
-
 ## Status
 ***Work-in-progress:***
 - Currently loads a given URL, and injects JavaScript, which allows you to draw on any given webpage. Please see [ROADMAP](ROADMAP.md)
