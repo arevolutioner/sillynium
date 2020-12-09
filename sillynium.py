@@ -1,8 +1,6 @@
 """
 File to run via cmd line, but a web extension is looking better currently..
 """
-import time
-
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -10,18 +8,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 # set up webdriver options
 options = webdriver.ChromeOptions()
 options.headless = False
+options.add_argument("--start-fullscreen")
 options.add_experimental_option("excludeSwitches", ['enable-automation'])
-# options.add_extension("HTML\Bookmark_extension\Bookmark_extension.crx")
 
 driver = webdriver.Chrome(
     options=options, executable_path=ChromeDriverManager(log_level=0).install()
     )
 
-# First page that opens should have a back ground which gives instructions.
-# Or it should just load directly to Sillynium.com to drive page traffic
-driver.get("https://www.reddit.com/")
+# Get URL
+driver.get("https://www.google.com/")
 
-js = """`
+# Get document.body scrollheight/scrollwidth
+scroll_height = driver.execute_script('return document.body.scrollHeight')
+scroll_width = driver.execute_script('return document.body.scrollWidth')
+
+# This is where it gets ugly, brace yourselve's pure HTML/CSS/JS with Python
+iframe = """`
 <iframe srcdoc=
         '<!DOCTYPE html>
         <html lang="en">
@@ -30,11 +32,11 @@ js = """`
                 <title>Paint</title>
                 <style>
                     #container { position: relative; }
-                #imageView { border: 10px solid #000; }
-                #imageTemp { position: absolute; top: 1px; left: 1px; }
+                #imageView { border: 0px solid #000; }
+                #imageTemp { position: absolute; top: 0px; left: 0px; }
                     label {
                         position: relative;
-                        z-index: 1;
+                        z-index: -10000;
                     }
                 </style>
             </head>
@@ -45,10 +47,11 @@ js = """`
                         <option value="pencil">Pencil</option>
                     </select>
                 </label>
-                <div id="container">
-                    <canvas id="imageView" width="500" height="2000"></canvas>
-                    <canvas id="imageTemp" width="500" height="2000"></canvas>
-                </div>
+                <div id="container">""" + f"""
+          <canvas id="imageView" width="{scroll_width}" height="{scroll_height}" 
+          ></canvas>
+          <canvas id="imageTemp" width="{scroll_width}" height="{scroll_height}"
+          ></canvas></div>""" + """
                 <script>
 
                     /* © 2009 ROBO Design
@@ -148,8 +151,8 @@ window.addEventListener("load", function () {
   // #imageTemp is cleared. This function is called each time when the user
   // completes a drawing operation.
   function img_update () {
-		contexto.drawImage(canvas, 0, 0);
-		context.clearRect(0, 0, canvas.width, canvas.height);
+    contexto.drawImage(canvas, 0, 0);
+    context.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   // This object holds the implementation of each drawing tool.
@@ -250,4 +253,5 @@ window.addEventListener("load", function () {
 
 """
 
-driver.execute_script(f'document.body.innerHTML += {js}')
+# Insert the iframe into the current webpage to draw
+driver.execute_script(f'document.body.innerHTML += {iframe}')
