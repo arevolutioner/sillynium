@@ -7,10 +7,11 @@ Automatically generate python selenium scripts by drawing coloured boxes around 
 
 See [ROADMAP](ROADMAP.md) for how it works, vision, and TODO.
 
-| V1 (End-of-life)     | V2 (Work-in-progress) |
+| V1     | V2  |
 | ----------- | ----------- |
 |<p align="center"><img src="media/sillynium_v1.gif" height="250" width="500"></p>|<p align="center"><img src="media/sillynium_v2.gif" height="250" width="500"></p>|
 | Draws on a *screenshot of a webpage* | Draws *directly on webpage* |
+| Concept only/working prototype | Currently being developed |
 
 
 ## Status
